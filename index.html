@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macroeconomics Jeopardy Study Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #002366;
+      color: white;
+    }
+
+    header {
+      background-color: #003399;
+      text-align: center;
+      padding: 1rem 0;
+      color: gold;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .category {
+      background-color: #003399;
+      text-align: center;
+      padding: 10px;
+      border: 2px solid gold;
+      border-radius: 5px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .button {
+      background-color: #0047AB;
+      border: 2px solid gold;
+      color: white;
+      font-size: 1.2rem;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: gold;
+      color: #003399;
+      transform: scale(1.1);
+    }
+
+    .flipped {
+      background-color: #003399;
+      color: gold;
+    }
+
+    .content-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    .popup-active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Macroeconomics Jeopardy Study Guide</h1>
+  </header>
+
+  <div class="container">
+    <!-- Category: Government Deficits and National Debt -->
+    <div class="category">
+      <h2>Government Deficits and National Debt</h2>
+      <div class="button-grid">
+        <button class="button" data-question="What is a government deficit?" data-answer="When government spending exceeds revenue in a fiscal year.">100</button>
+        <button class="button" data-question="Explain how national debt accumulates." data-answer="Through repeated government deficits over time.">200</button>
+        <button class="button" data-question="Compare fiscal policy types." data-answer="Expansionary policies boost demand; contractionary policies reduce inflation.">300</button>
+        <button class="button" data-question="How deficits lead to debt?" data-answer="Deficits require borrowing, increasing the national debt.">400</button>
+      </div>
+    </div>
+
+    <!-- Category: Crowding Out Effect -->
+    <div class="category">
+      <h2>Crowding Out Effect</h2>
+      <div class="button-grid">
+        <button class="button" data-question="Define crowding out." data-answer="Government borrowing raises interest rates, reducing private investment.">100</button>
+        <button class="button" data-question="Explain its impact on growth." data-answer="Higher rates limit private investment, slowing growth.">200</button>
+        <button class="button" data-question="Examples of crowding out?" data-answer="Occurs when government infrastructure spending reduces private opportunities.">300</button>
+        <button class="button" data-question="Concerns of crowding out?" data-answer="It limits private sector innovation and growth.">400</button>
+      </div>
+    </div>
+
+    <!-- Category: The Phillips Curve -->
+    <div class="category">
+      <h2>The Phillips Curve</h2>
+      <div class="button-grid">
+        <button class="button" data-question="What is the Phillips Curve?" data-answer="It shows the inverse relationship between inflation and unemployment.">100</button>
+        <button class="button" data-question="What does the short-run Phillips Curve indicate?" data-answer="It indicates a trade-off between inflation and unemployment.">200</button>
+        <button class="button" data-question="Explain the long-run Phillips Curve." data-answer="It is vertical, indicating no trade-off between inflation and unemployment in the long run.">300</button>
+        <button class="button" data-question="What is stagflation?" data-answer="A situation with high inflation and high unemployment simultaneously.">400</button>
+      </div>
+    </div>
+
+    <!-- Category: Money Growth and Inflation -->
+    <div class="category">
+      <h2>Money Growth and Inflation</h2>
+      <div class="button-grid">
+        <button class="button" data-question="What is the Quantity Theory of Money?" data-answer="It relates the money supply to price levels and inflation.">100</button>
+        <button class="button" data-question="What is velocity of money?" data-answer="The rate at which money circulates in the economy.">200</button>
+        <button class="button" data-question="What causes hyperinflation?" data-answer="Rapid and excessive money supply growth.">300</button>
+        <button class="button" data-question="What policies control inflation?" data-answer="Monetary policies like interest rate adjustments.">400</button>
+      </div>
+    </div>
+
+    <!-- Category: Fiscal and Monetary Policy in the Short Run -->
+    <div class="category">
+      <h2>Fiscal and Monetary Policy in the Short Run</h2>
+      <div class="button-grid">
+        <button class="button" data-question="What is fiscal policy?" data-answer="Government spending and taxation adjustments.">100</button>
+        <button class="button" data-question="What is monetary policy?" data-answer="Central bank actions to control money supply and interest rates.">200</button>
+        <button class="button" data-question="How do these policies stabilize the economy?" data-answer="By influencing aggregate demand and economic output.">300</button>
+        <button class="button" data-question="Which policy is better for recessions?" data-answer="It depends on the economic conditions and goals.">400</button>
+      </div>
+    </div>
+
+    <!-- Category: Public Policy and Long-Term Growth -->
+    <div class="category">
+      <h2>Public Policy and Long-Term Growth</h2>
+      <div class="button-grid">
+        <button class="button" data-question="What are supply-side policies?" data-answer="Policies to increase productivity and growth.">100</button>
+        <button class="button" data-question="How does infrastructure impact growth?" data-answer="Investments improve efficiency and economic potential.">200</button>
+        <button class="button" data-question="What is human capital?" data-answer="Skills and education that increase workforce productivity.">300</button>
+        <button class="button" data-question="What drives long-term growth?" data-answer="Innovation, investment, and stable policies.">400</button>
+      </div>
+    </div>
+
+    <!-- Category: Crowding Out vs. Economic Stimulus -->
+    <div class="category">
+      <h2>Crowding Out vs. Economic Stimulus</h2>
+      <div class="button-grid">
+        <button class="button" data-question="What is an economic stimulus?" data-answer="Government spending to boost aggregate demand.">100</button>
+        <button class="button" data-question="What is crowding out?" data-answer="When government borrowing reduces private sector activity.">200</button>
+        <button class="button" data-question="When is stimulus effective?" data-answer="During recessions to prevent economic contraction.">300</button>
+        <button class="button" data-question="What are stimulus risks?" data-answer="Increased debt and potential inflation.">400</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup" class="content-popup">
+    <h3 id="popup-question"></h3>
+    <p id="popup-answer"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.button');
+    const popup = document.getElementById('popup');
+    const questionElement = document.getElementById('popup-question');
+    const answerElement = document.getElementById('popup-answer');
+
+    buttons.forEach(button => {
+      let state = 0; // 0 = question, 1 = answer, 2 = reset
+
+      button.addEventListener('click', () => {
+        if (state === 0) {
+          questionElement.textContent = button.dataset.question;
+          answerElement.textContent = "";
+          popup.classList.add('popup-active');
+          state = 1;
+        } else if (state === 1) {
+          answerElement.textContent = button.dataset.answer;
+          state = 2;
+        } else {
+          popup.classList.remove('popup-active');
+          state = 0;
+        }
+      });
+    });
+
+    function closePopup() {
+      popup.classList.remove('popup-active');
+    }
+  </script>
+</body>
+</html>
